@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs') -%>
+
+<div class="startingContent">
+  <h1>Compose</h1>
+  <form action="/compose" method="post">
+    <div class="mb-3">
+      <label class="form-label" for="userInput1"><h6>Title</h6></label>
+      <input
+        class="form-control"
+        type="text"
+        name="postTitle"
+        id="userInput1"
+        autocomplete="off"
+        placeholder="Enter the title of your post"
+        autofocus
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="userInput2"><h6>Post</h6></label>
+      <textarea
+        class="form-control"
+        id="userInput2"
+        name="postBody"
+        cols="30"
+        rows="10"
+        placeholder="Enter the body/content of your post"
+      ></textarea>
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-primary" type="submit" name="button">
+        Publish
+      </button>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') -%>

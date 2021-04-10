@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') -%>
+
+<div class="startingContent">
+  <h1>Contact</h1>
+  <p><%= contactPageContent %></p>
+
+  <form
+    action="mailto:dhruvilsoni1703@gmail.com"
+    method="post"
+    enctype="text/plain"
+    class="contact-me"
+  >
+    <div class="mb-3">
+      <label class="form-label" for="userName"><h6>Your Name:</h6></label>
+      <input
+        class="form-control"
+        id="userName"
+        type="text"
+        name="yourName"
+        autocomplete="off"
+        placeholder="Enter your Name"
+        autofocus
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="email"><h6>Your Email-id:</h6></label>
+      <input
+        class="form-control"
+        id="email"
+        type="email"
+        name="yourEmail"
+        autocomplete="off"
+        placeholder="Enter your Email-id"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="userMessage"><h6>Your Message:</h6></label>
+      <textarea
+        name="yourMessage"
+        class="form-control"
+        rows="10"
+        cols="30"
+        id="userMessage"
+        placeholder="Enter your Message here"
+        autocomplete="off"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') -%>

@@ -1,0 +1,19 @@
+<%- include ('partials/header.ejs') -%>
+
+<div class="startingContent">
+  <h1>Home</h1>
+  <p><%= homePageContent %></p>
+
+  <% allPosts.forEach(function(post) { %>
+  <h1><%= post.title %></h1>
+
+  <% var postContentLength = post.content.length %> <% if(postContentLength >
+  100) { %>
+  <p class="content"><%= post.content.substring(0, 100) + " ..."; %></p>
+  <a class="link" href="/posts/<%= post.title %>">Read More</a>
+  <% } else { %>
+  <p><%= post.content %></p>
+  %> <% } %> <% }) %>
+</div>
+
+<%- include ('partials/footer.ejs') -%>
